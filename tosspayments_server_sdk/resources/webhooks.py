@@ -1,5 +1,5 @@
 import json
-from typing import Union, Dict
+from typing import Union
 
 from tosspayments_server_sdk.exceptions import WebhookVerificationError
 from tosspayments_server_sdk.models.webhook import WebhookEvent, create_webhook_event

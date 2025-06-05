@@ -193,5 +193,5 @@ class Payment(BaseModel):
     def get_canceled_amount(self) -> int:
         return self.total_amount - self.balance_amount
 
-    def can_be_canceled(self) -> int:
+    def can_be_canceled(self) -> bool:
         return self.balance_amount > 0

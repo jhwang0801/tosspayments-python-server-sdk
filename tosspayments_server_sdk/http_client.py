@@ -78,7 +78,6 @@ class HTTPClient:
         error_code = response_data.get("code", "UNKNOWN_ERROR")
         error_message = response_data.get("message", "Unknown error occurred")
 
-        # 특정 오류 타입별 처리
         if ErrorCodes.is_auth_error(error_code):
             from .exceptions import AuthenticationError
 
@@ -93,13 +92,6 @@ class HTTPClient:
             from .exceptions import PaymentNotFoundError
 
             raise PaymentNotFoundError(
-                error_message, error_code, response.status_code, response_data
-            )
-
-        elif error_code == "ALREADY_CANCELED_PAYMENT":
-            from .exceptions import PaymentAlreadyCanceledError
-
-            raise PaymentAlreadyCanceledError(
                 error_message, error_code, response.status_code, response_data
             )
 

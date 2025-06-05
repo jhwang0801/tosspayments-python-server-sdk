@@ -1,5 +1,5 @@
 class ErrorCodes:
-    """토스페이먼츠 에러 코드 상수"""
+    """TossPayments error code constants"""
 
     # API KEY ERRORS
     # https://docs.tosspayments.com/reference/using-api/api-keys#api-키-에러
@@ -9,7 +9,7 @@ class ErrorCodes:
     INCORRECT_BASIC_AUTH_FORMAT = "INCORRECT_BASIC_AUTH_FORMAT"
 
     class Groups:
-        """에러 코드 그룹들"""
+        """Error code groups"""
 
         AUTH = {
             "INVALID_CLIENT_KEY",  # 400
@@ -18,14 +18,6 @@ class ErrorCodes:
             "INCORRECT_BASIC_AUTH_FORMAT",  # 401
         }
 
-        # 나중에 추가될 그룹들
-        # PAYMENT = {
-        #     "ALREADY_CANCELED_PAYMENT",
-        #     "PAYMENT_NOT_FOUND",
-        #     "INSUFFICIENT_BALANCE"
-        # }
-
-    # ============= 편의 메서드들 =============
     @classmethod
     def is_auth_error(cls, error_code: str) -> bool:
         return error_code in cls.Groups.AUTH

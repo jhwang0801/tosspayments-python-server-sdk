@@ -2,13 +2,13 @@ from typing import Optional, Dict, Any
 
 
 class TossPaymentsError(Exception):
-    """모든 토스페이먼츠 SDK 예외의 기본 클래스"""
+    """Base class for all TossPayments SDK exceptions"""
 
     pass
 
 
 class APIError(TossPaymentsError):
-    """API 호출 중 발생하는 오류"""
+    """Error that occurs during API calls"""
 
     def __init__(
         self,
@@ -30,54 +30,36 @@ class APIError(TossPaymentsError):
 
 
 class WebhookVerificationError(TossPaymentsError):
-    """웹훅 파싱 실패 에러"""
+    """Webhook parsing failure error"""
 
     pass
 
 
 class AuthenticationError(TossPaymentsError):
-    """인증 관련 오류"""
+    """Authentication related error"""
 
     pass
 
 
 class ValidationError(TossPaymentsError):
-    """입력값 검증 오류"""
+    """Input validation error"""
 
     pass
 
 
 class NetworkError(TossPaymentsError):
-    """네트워크 관련 오류"""
+    """Network related error"""
 
     pass
 
 
 class RateLimitError(APIError):
-    """API 요청 한도 초과"""
+    """API request limit exceeded"""
 
     pass
 
 
 class PaymentNotFoundError(APIError):
-    """결제 정보를 찾을 수 없음"""
-
-    pass
-
-
-class PaymentAlreadyCanceledError(APIError):
-    """이미 취소된 결제"""
-
-    pass
-
-
-class InsufficientAmountError(APIError):
-    """취소 가능 금액 부족"""
-
-    pass
-
-
-class PaymentCancelError(APIError):
-    """결제 취소 실패"""
+    """Payment information not found"""
 
     pass

@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from sys import api_version
 
 
 @dataclass

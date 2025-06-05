@@ -15,8 +15,6 @@ class PaymentStatus(Enum):
 
 
 class PaymentMethod(Enum):
-    """결제 수단"""
-
     CARD = "카드"
     VIRTUAL_ACCOUNT = "가상계좌"
     SIMPLE_PAYMENT = "간편결제"
@@ -28,8 +26,6 @@ class PaymentMethod(Enum):
 
 
 class PaymentType(Enum):
-    """결제 타입"""
-
     NORMAL = "NORMAL"  # 일반결제
     BILLING = "BILLING"  # 자동결제
     BRANDPAY = "BRANDPAY"  # 브랜드페이

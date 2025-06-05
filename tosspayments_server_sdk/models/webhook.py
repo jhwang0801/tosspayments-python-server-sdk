@@ -1,7 +1,7 @@
 from abc import ABC
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Dict, Any, Optional, Type, Union
+from typing import Dict, Any, Union
 
 from tosspayments_server_sdk.exceptions import ValidationError
 from tosspayments_server_sdk.models.base import BaseModel
@@ -171,16 +171,16 @@ WebhookEvent = Union[
 
 
 def create_webhook_event(data: Dict[str, Any]) -> WebhookEvent:
-    """웹훅 데이터에서 적절한 이벤트 객체 생성
+    """Create event object from webhook data
 
     Args:
-        data: 웹훅 원본 데이터
+        data: Raw webhook data
 
     Returns:
-        WebhookEvent: 이벤트 타입에 맞는 웹훅 이벤트 객체
+        WebhookEvent: Webhook event object matching the event type
 
     Raises:
-        ValidationError: 지원하지 않는 웹훅 타입이거나 구조를 인식할 수 없는 경우
+        ValidationError: When webhook type is unsupported or structure is unrecognizable
     """
 
     return BaseWebhookEvent.from_dict(data)  # type: ignore

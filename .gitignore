@@ -165,7 +165,7 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
 
 # Abstra
 # Abstra is an AI-powered process automation framework.
@@ -192,3 +192,61 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# API 키 및 민감한 정보
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+config.json
+.secrets/
+credentials/
+
+# 테스트용 API 키/토큰 파일
+test_api_key.txt
+sandbox_key.txt
+*_secret.txt
+*_token.txt
+
+# 결제 테스트 관련 파일
+payment_test_data.json
+webhook_test_logs/
+test_receipts/
+
+# IDE 및 에디터 특화
+.vscode/settings.json  # 개인 설정만 제외, 공유 설정은 커밋
+*.swp
+*.swo
+*~
+
+# 개발용 임시 파일
+scratch/
+temp/
+tmp/
+playground/
+debug/
+examples/local_test.py
+
+# 빌드 아티팩트 (이미 있지만 명시적으로)
+build/
+dist/
+*.egg-info/
+
+# 로컬 개발용 설정
+.env.local
+.env.development
+config_local.py
+
+# 문서 빌드 (Sphinx 등)
+docs/_build/
+docs/build/
+
+# 성능 프로파일링
+*.prof
+profile_output/
+
+# 백업 파일
+*.bak
+*.backup
+*.orig

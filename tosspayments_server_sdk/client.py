@@ -16,10 +16,10 @@ class Client:
         """
 
         Args:
-            secret_key: 토스페이먼츠 시크릿 키
-            api_version:  API 버전
-            timeout:  요청 타임아웃 (초)
-            max_retries: 최대 재시도 횟수
+            secret_key: TossPayments secret key
+            api_version: API version
+            timeout: Request timeout (seconds)
+            max_retries: Maximum retry count
         """
         self.config = Config(
             secret_key=secret_key,
@@ -31,7 +31,7 @@ class Client:
 
         self._http_client = HTTPClient(self.config)
         self.payments = PaymentResource(self._http_client)
-        self.webhooks = WebhookResource()  # HTTP client 필요 없음
+        self.webhooks = WebhookResource()  # No HTTP client needed
 
     @property
     def is_live_mode(self) -> bool:
