@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/error-handling/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/payments/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/webhooks/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/configuration/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/installation/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/quickstart/</loc>
+         <lastmod>2025-07-02</lastmod>
+    </url>
+</urlset>
