@@ -897,48 +897,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Creation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Creation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-api-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      From API Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-to-dictionary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Convert to Dictionary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-nested-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Working with Nested Models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#related-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       Related Documentation
@@ -1238,48 +1196,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Creation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Creation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-api-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      From API Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-to-dictionary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Convert to Dictionary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-nested-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Working with Nested Models
-    </span>
-  </a>
   
 </li>
       
@@ -1879,58 +1795,6 @@ Returns <code>True</code> if the payment can be canceled (<code>balance_amount &
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard one-time payment&quot;</span><span class="p">)</span>
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="k">elif</span> <span class="n">payment</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">PaymentType</span><span class="o">.</span><span class="n">BILLING</span><span class="p">:</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recurring/subscription payment&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="model-creation">Model Creation</h2>
-<h3 id="from-api-response">From API Response</h3>
-<p>Models are typically created from API responses:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Automatic creation from API response</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">payment</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;payment_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># Manual creation from dictionary</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">payment_data</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="s2">&quot;paymentKey&quot;</span><span class="p">:</span> <span class="s2">&quot;mc_1234567890123456789012345678901234567890&quot;</span><span class="p">,</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="s2">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;order_123&quot;</span><span class="p">,</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    <span class="s2">&quot;orderName&quot;</span><span class="p">:</span> <span class="s2">&quot;Test Order&quot;</span><span class="p">,</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    <span class="c1"># ... other fields</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="p">}</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="n">payment</span> <span class="o">=</span> <span class="n">Payment</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">payment_data</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="convert-to-dictionary">Convert to Dictionary</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Convert model to dictionary</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">payment_dict</span> <span class="o">=</span> <span class="n">payment</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Useful for serialization</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">payment_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payment_dict</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="working-with-nested-models">Working with Nested Models</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Access nested models</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">payment</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;payment_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1"># Card payments</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="k">if</span> <span class="n">payment</span><span class="o">.</span><span class="n">card</span><span class="p">:</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Paid with card: </span><span class="si">{</span><span class="n">payment</span><span class="o">.</span><span class="n">card</span><span class="o">.</span><span class="n">issuer_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="k">if</span> <span class="n">payment</span><span class="o">.</span><span class="n">card</span><span class="o">.</span><span class="n">installment_plan_months</span><span class="p">:</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Installments: </span><span class="si">{</span><span class="n">payment</span><span class="o">.</span><span class="n">card</span><span class="o">.</span><span class="n">installment_plan_months</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="c1"># Virtual account payments</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="k">if</span> <span class="n">payment</span><span class="o">.</span><span class="n">virtual_account</span><span class="p">:</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="n">va</span> <span class="o">=</span> <span class="n">payment</span><span class="o">.</span><span class="n">virtual_account</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Virtual account: </span><span class="si">{</span><span class="n">va</span><span class="o">.</span><span class="n">bank_code</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">va</span><span class="o">.</span><span class="n">account_number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Due: </span><span class="si">{</span><span class="n">va</span><span class="o">.</span><span class="n">due_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="c1"># Cancellation history</span>
-<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="k">if</span> <span class="n">payment</span><span class="o">.</span><span class="n">cancels</span><span class="p">:</span>
-<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    <span class="n">total_canceled</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">cancel_amount</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">payment</span><span class="o">.</span><span class="n">cancels</span><span class="p">)</span>
-<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total canceled: </span><span class="si">{</span><span class="n">total_canceled</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> KRW&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>
-<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cancel</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">payment</span><span class="o">.</span><span class="n">cancels</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cancellation </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">cancel</span><span class="o">.</span><span class="n">cancel_amount</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> KRW&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Reason: </span><span class="si">{</span><span class="n">cancel</span><span class="o">.</span><span class="n">cancel_reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Date: </span><span class="si">{</span><span class="n">cancel</span><span class="o">.</span><span class="n">canceled_at</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="related-documentation">Related Documentation</h2>
 <ul>
