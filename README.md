@@ -57,6 +57,20 @@ payment = client.payments.retrieve_by_order_id("a4CWyWY5m89PNh7xJwhk1")
 
 print(f"Payment status: {payment.status.value}")
 print(f"Payment method: {payment.method}")
+
+# Access nested payment details with dataclass properties
+if payment.card:
+    print(f"Card issuer: {payment.card.issuer_code}")
+    print(f"Installments: {payment.card.installment_plan_months}")
+elif payment.virtual_account:
+    print(f"Virtual account: {payment.virtual_account.bank_code}")
+    print(f"Account number: {payment.virtual_account.account_number}")
+
+# Use convenient methods for payment status checks
+if payment.is_paid():
+    print("✅ Payment completed")
+elif payment.can_be_canceled():
+    print(f"Can cancel up to: {payment.get_cancelable_amount():,} KRW")
 ```
 
 ### Cancel Payment
@@ -108,6 +122,68 @@ def handle_webhook(request):
     return "OK", 200
 ```
 
+## Why This SDK?
+
+### Beyond Simple API Calls
+
+This SDK doesn't just make API calls - it transforms TossPayments responses into **intelligent, easy-to-use objects** with built-in business logic:
+
+```python
+# ❌ Raw API approach - complex and error-prone
+if response["status"] == "DONE" and response["balanceAmount"] > 0:
+    cancelable = response["totalAmount"] - (response["totalAmount"] - response["balanceAmount"])
+    if cancelable >= refund_amount:
+        # Complex cancellation logic...
+
+# ✅ This SDK - simple and intuitive
+if payment.is_paid() and payment.can_be_canceled():
+    max_refund = payment.get_cancelable_amount()
+    if max_refund >= refund_amount:
+        # Clean business logic
+        process_refund(payment, refund_amount)
+```
+
+### Smart Business Logic Methods
+
+- **`payment.is_paid()`** - Intelligent status checking instead of string comparison
+- **`payment.can_be_canceled()`** - Automatic validation for cancellation eligibility  
+- **`payment.get_cancelable_amount()`** - Calculate remaining refundable amount
+- **`payment.get_canceled_amount()`** - Track total canceled amount
+- **`webhook_event.is_payment_completed()`** - Smart webhook event handling
+
+### Type-Safe Data Access
+
+```python
+# Full IDE autocomplete and type safety
+if payment.card:
+    issuer = payment.card.issuer_code          # String
+    installments = payment.card.installment_plan_months  # Optional[int]
+elif payment.virtual_account:
+    bank = payment.virtual_account.bank_code   # String  
+    due_date = payment.virtual_account.due_date # datetime
+```
+
+### Real Business Logic Example
+
+```python
+def handle_payment_result(payment):
+    """Clean, readable business logic"""
+    if payment.is_paid():
+        # Order fulfillment
+        send_confirmation_email(payment.order_id)
+        update_inventory(payment)
+        process_delivery(payment)
+        
+    elif payment.can_be_canceled():
+        # Show refund options
+        max_refund = payment.get_cancelable_amount()
+        enable_refund_button(max_amount=max_refund)
+        
+    # Access payment method details easily
+    if payment.card and payment.card.installment_plan_months:
+        schedule_installment_notifications(payment)
+```
+
 ## Features
 
 ### 🔐 Authentication
@@ -123,6 +199,12 @@ def handle_webhook(request):
 - Payment status change events
 - Cancellation status change events  
 - Virtual account deposit completion events
+
+### 📝 Type Safety & Data Models
+- Full type hints support for better IDE experience
+- Dataclass-based models for structured data access
+- Automatic JSON serialization/deserialization
+- Rich payment objects with convenient methods
 
 ### ⚡ HTTP Client
 - Automatic retry with backoff
@@ -194,7 +276,7 @@ MIT License
 
 ### 설치 및 사용법
 
-자세한 사용법은 [문서 사이트](https://jhwang0801.github.io/tosspayments-python-server-sdk)를 참고하세요.
+자세한 사용법은 [문서 사이트](https://jhwang0801.github.io/tosspayments-python-server-sdk/)를 참고하세요.
 
 ### 문의 및 지원
 
