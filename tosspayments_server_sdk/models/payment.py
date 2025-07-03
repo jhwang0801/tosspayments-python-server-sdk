@@ -182,16 +182,21 @@ class Payment(BaseModel):
         )
 
     def is_paid(self) -> bool:
+        """Check if payment is completed (결제 완료 여부 확인)."""
         return self.status == PaymentStatus.DONE
 
     def is_canceled(self) -> bool:
+        """Check if payment is canceled (결제 취소 여부 확인)."""
         return self.status in [PaymentStatus.CANCELED, PaymentStatus.PARTIAL_CANCELED]
 
     def get_cancelable_amount(self) -> int:
+        """Get cancelable amount (취소 가능 금액 조회)."""
         return self.balance_amount
 
     def get_canceled_amount(self) -> int:
+        """Get canceled amount (취소된 금액 조회)."""
         return self.total_amount - self.balance_amount
 
     def can_be_canceled(self) -> bool:
+        """Check if payment can be canceled (취소 가능 여부 확인)."""
         return self.balance_amount > 0

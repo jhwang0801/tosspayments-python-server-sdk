@@ -19,7 +19,7 @@ from .exceptions import (
     WebhookVerificationError,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.0.4"
 __author__ = "Jayson Hwang"
 __email__ = "jhwang90801@gmail.com"
 
