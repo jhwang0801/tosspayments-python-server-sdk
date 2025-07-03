@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
-         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/error-handling/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api-reference/client/</loc>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
-         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/payments/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api-reference/models/</loc>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
-         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api/webhooks/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api-reference/payments/</loc>
+         <lastmod>2025-07-03</lastmod>
+    </url>
+    <url>
+         <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/api-reference/webhooks/</loc>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
          <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/configuration/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
          <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/installation/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <lastmod>2025-07-03</lastmod>
     </url>
     <url>
          <loc>https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/quickstart/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <lastmod>2025-07-03</lastmod>
     </url>
 </urlset>

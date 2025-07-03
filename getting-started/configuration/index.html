@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Python SDK for TossPayments API - Server-side payment processing">
+        <meta name="description" content="Python SDK for TossPayments API - Simple and intuitive server-side payment processing">
       
       
       
         <link rel="canonical" href="https://jhwang0801.github.io/tosspayments-python-server-sdk/getting-started/configuration/">
       
       
-        <link rel="prev" href="../quickstart/">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../../api/payments/">
+        <link rel="next" href="../quickstart/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>설정 - TossPayments Python Server SDK</title>
+        <title>Configuration - TossPayments Python Server SDK</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              설정
+              Configuration
             
           </span>
         </div>
@@ -180,6 +180,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -234,7 +236,7 @@
   
     
   
-  홈
+  Home
 
       </a>
     </li>
@@ -255,7 +257,7 @@
           
   
   
-  시작하기
+  Getting Started
 
         </a>
       </li>
@@ -271,51 +273,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../api/payments/" class="md-tabs__link">
+        <a href="../../api-reference/client/" class="md-tabs__link">
           
   
   
-  API 가이드
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../examples/basic-payment.md" class="md-tabs__link">
-          
-  
-  
-  예제
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../reference/client.md" class="md-tabs__link">
-          
-  
-  
-  API 레퍼런스
+  API Reference
 
         </a>
       </li>
@@ -380,7 +342,7 @@
   
   
   <span class="md-ellipsis">
-    홈
+    Home
     
   </span>
   
@@ -423,7 +385,7 @@
   
   
   <span class="md-ellipsis">
-    시작하기
+    Getting Started
     
   </span>
   
@@ -434,7 +396,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            시작하기
+            Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -450,30 +412,7 @@
   
   
   <span class="md-ellipsis">
-    설치
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    빠른 시작
+    Installation
     
   </span>
   
@@ -505,7 +444,7 @@
   
   
   <span class="md-ellipsis">
-    설정
+    Configuration
     
   </span>
   
@@ -518,7 +457,7 @@
   
   
   <span class="md-ellipsis">
-    설정
+    Configuration
     
   </span>
   
@@ -541,28 +480,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#api-credentials" class="md-nav__link">
     <span class="md-ellipsis">
-      API 키 발급
+      API Credentials
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="API 키 발급">
+    <nav class="md-nav" aria-label="API Credentials">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#getting-your-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 토스페이먼츠 개발자센터 가입
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. API 키 확인
+      Getting Your API Keys
     </span>
   </a>
   
@@ -574,28 +504,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#client-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      기본 클라이언트 설정
+      Client Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="기본 클라이언트 설정">
+    <nav class="md-nav" aria-label="Client Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#basic-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      환경변수 사용 (권장)
+      Basic Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#advanced-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      직접 설정
+      Advanced Configuration
     </span>
   </a>
   
@@ -607,46 +537,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#configuration-options" class="md-nav__link">
     <span class="md-ellipsis">
-      고급 설정 옵션
+      Configuration Options
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="고급 설정 옵션">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#setting-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      타임아웃 설정
+      Setting Environment Variables
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#using-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      재시도 설정
+      Using Environment Variables
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api_1" class="md-nav__link">
+  <a href="#using-python-dotenv" class="md-nav__link">
     <span class="md-ellipsis">
-      API 버전 지정
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      전체 설정 예시
+      Using python-dotenv
     </span>
   </a>
   
@@ -658,37 +597,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#configuration-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      환경별 설정 관리
+      Configuration Validation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="환경별 설정 관리">
+    <nav class="md-nav" aria-label="Configuration Validation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#validation-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      개발/테스트/운영 환경 분리
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django 설정 예시
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flask" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flask 설정 예시
+      Validation Rules
     </span>
   </a>
   
@@ -700,55 +621,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#http-client-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      모드 확인
+      HTTP Client Configuration
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      설정 검증
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      보안 모범 사례
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="보안 모범 사례">
+    <nav class="md-nav" aria-label="HTTP Client Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
+  <a href="#custom-http-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 환경변수 사용
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-aws-systems-manager-parameter-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. AWS Systems Manager Parameter Store
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-docker-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Docker Secrets
+      Custom HTTP Configuration
     </span>
   </a>
   
@@ -760,33 +645,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#testing-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      문제 해결
+      Testing Configuration
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="문제 해결">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      일반적인 설정 오류
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      다음 단계
+      Next Steps
     </span>
   </a>
   
@@ -801,6 +671,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -828,7 +721,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -836,7 +731,7 @@
   
   
   <span class="md-ellipsis">
-    API 가이드
+    API Reference
     
   </span>
   
@@ -847,7 +742,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            API 가이드
+            API Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -858,245 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/payments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    결제
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/webhooks/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    웹훅
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/error-handling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    에러 처리
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    예제
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            예제
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/basic-payment.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    기본 결제
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/webhook-handling.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    웹훅 처리
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/error-handling.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    에러 처리
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    API 레퍼런스
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            API 레퍼런스
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/client.md" class="md-nav__link">
+      <a href="../../api-reference/client/" class="md-nav__link">
         
   
   
@@ -1119,12 +776,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/payment.md" class="md-nav__link">
+      <a href="../../api-reference/payments/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Payment
+    PaymentResource
     
   </span>
   
@@ -1142,12 +799,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/webhook.md" class="md-nav__link">
+      <a href="../../api-reference/webhooks/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Webhook
+    WebhookResource
     
   </span>
   
@@ -1165,12 +822,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exceptions.md" class="md-nav__link">
+      <a href="../../api-reference/models/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Exceptions
+    Models
     
   </span>
   
@@ -1215,28 +872,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#api-credentials" class="md-nav__link">
     <span class="md-ellipsis">
-      API 키 발급
+      API Credentials
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="API 키 발급">
+    <nav class="md-nav" aria-label="API Credentials">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#getting-your-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 토스페이먼츠 개발자센터 가입
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. API 키 확인
+      Getting Your API Keys
     </span>
   </a>
   
@@ -1248,28 +896,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#client-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      기본 클라이언트 설정
+      Client Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="기본 클라이언트 설정">
+    <nav class="md-nav" aria-label="Client Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#basic-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      환경변수 사용 (권장)
+      Basic Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#advanced-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      직접 설정
+      Advanced Configuration
     </span>
   </a>
   
@@ -1281,46 +929,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#configuration-options" class="md-nav__link">
     <span class="md-ellipsis">
-      고급 설정 옵션
+      Configuration Options
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="고급 설정 옵션">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#setting-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      타임아웃 설정
+      Setting Environment Variables
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#using-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      재시도 설정
+      Using Environment Variables
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api_1" class="md-nav__link">
+  <a href="#using-python-dotenv" class="md-nav__link">
     <span class="md-ellipsis">
-      API 버전 지정
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      전체 설정 예시
+      Using python-dotenv
     </span>
   </a>
   
@@ -1332,37 +989,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#configuration-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      환경별 설정 관리
+      Configuration Validation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="환경별 설정 관리">
+    <nav class="md-nav" aria-label="Configuration Validation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#validation-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      개발/테스트/운영 환경 분리
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django 설정 예시
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flask" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flask 설정 예시
+      Validation Rules
     </span>
   </a>
   
@@ -1374,55 +1013,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#http-client-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      모드 확인
+      HTTP Client Configuration
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      설정 검증
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      보안 모범 사례
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="보안 모범 사례">
+    <nav class="md-nav" aria-label="HTTP Client Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
+  <a href="#custom-http-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 환경변수 사용
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-aws-systems-manager-parameter-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. AWS Systems Manager Parameter Store
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-docker-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Docker Secrets
+      Custom HTTP Configuration
     </span>
   </a>
   
@@ -1434,33 +1037,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#testing-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      문제 해결
+      Testing Configuration
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="문제 해결">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      일반적인 설정 오류
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      다음 단계
+      Next Steps
     </span>
   </a>
   
@@ -1485,238 +1073,189 @@
   
 
 
-<h1 id="_1">설정</h1>
-<p>TossPayments SDK 사용을 위한 설정 방법을 안내합니다.</p>
-<h2 id="api">API 키 발급</h2>
-<h3 id="1">1. 토스페이먼츠 개발자센터 가입</h3>
-<p><a href="https://developers.tosspayments.com/">토스페이먼츠 개발자센터</a>에서 회원가입 후 상점을 등록하세요.</p>
-<h3 id="2-api">2. API 키 확인</h3>
-<p>개발자센터 &gt; 연동 관리 &gt; API 키에서 확인할 수 있습니다:</p>
-<ul>
-<li><strong>테스트 시크릿 키</strong>: <code>test_sk_...</code>로 시작</li>
-<li><strong>라이브 시크릿 키</strong>: <code>live_sk_...</code>로 시작</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">보안 주의사항</p>
-<ul>
-<li>시크릿 키는 절대 클라이언트 사이드에 노출하지 마세요</li>
-<li>GitHub 등 공개 저장소에 업로드하지 마세요</li>
-<li>환경변수 또는 보안 저장소에서 관리하세요</li>
-</ul>
-</div>
-<h2 id="_2">기본 클라이언트 설정</h2>
-<h3 id="_3">환경변수 사용 (권장)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># .env 파일 또는 시스템 환경변수</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TOSS_SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;test_sk_your_secret_key_here&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 환경변수에서 키 가져오기</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">secret_key</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="_4">직접 설정</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># 테스트 환경</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_test_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># 운영 환경  </span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;live_sk_your_live_key&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="_5">고급 설정 옵션</h2>
-<h3 id="_6">타임아웃 설정</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span>  <span class="c1"># 60초 (기본값: 30초)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span>
-</code></pre></div>
-<h3 id="_7">재시도 설정</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span>  <span class="c1"># 최대 5회 재시도 (기본값: 3회)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
-</code></pre></div>
-<h3 id="api_1">API 버전 지정</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span>  <span class="c1"># API 버전 (기본값: &quot;v1&quot;)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span>
-</code></pre></div>
-<h3 id="_8">전체 설정 예시</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">),</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">)</span>
-</code></pre></div>
-<h2 id="_9">환경별 설정 관리</h2>
-<h3 id="_10">개발/테스트/운영 환경 분리</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;ENVIRONMENT&quot;</span><span class="p">,</span> <span class="s2">&quot;development&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">==</span> <span class="s2">&quot;production&quot;</span><span class="p">:</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">toss_secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_LIVE_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">toss_secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_TEST_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="nd">@property</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">is_production</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">==</span> <span class="s2">&quot;production&quot;</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># 사용법</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">toss_secret_key</span><span class="p">)</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">is_production</span><span class="p">:</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔴 운영 환경에서 실행 중&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🟡 테스트 환경에서 실행 중&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="django">Django 설정 예시</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># settings.py</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">TOSS_SECRET_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">TOSS_TIMEOUT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_TIMEOUT&quot;</span><span class="p">,</span> <span class="s2">&quot;30&quot;</span><span class="p">))</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># views.py</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.conf</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">TOSS_SECRET_KEY</span><span class="p">,</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="n">timeout</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">TOSS_TIMEOUT</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">)</span>
-</code></pre></div>
-<h3 id="flask">Flask 설정 예시</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># config.py</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">TOSS_SECRET_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">TOSS_TIMEOUT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_TIMEOUT&quot;</span><span class="p">,</span> <span class="s2">&quot;30&quot;</span><span class="p">))</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># app.py</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="s2">&quot;config.Config&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">],</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    <span class="n">timeout</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;TOSS_TIMEOUT&quot;</span><span class="p">]</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">)</span>
-</code></pre></div>
-<h2 id="_11">모드 확인</h2>
-<p>클라이언트가 어떤 모드로 실행 중인지 확인:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># 모드 확인</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">if</span> <span class="n">client</span><span class="o">.</span><span class="n">is_test_mode</span><span class="p">:</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;테스트 모드&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">elif</span> <span class="n">client</span><span class="o">.</span><span class="n">is_live_mode</span><span class="p">:</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;운영 모드&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># 안전한 결제 처리</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">process_payment</span><span class="p">(</span><span class="n">payment_key</span><span class="p">,</span> <span class="n">order_id</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="k">if</span> <span class="n">client</span><span class="o">.</span><span class="n">is_test_mode</span><span class="p">:</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ 테스트 결제 진행&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">confirm</span><span class="p">(</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>        <span class="n">payment_key</span><span class="o">=</span><span class="n">payment_key</span><span class="p">,</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>        <span class="n">order_id</span><span class="o">=</span><span class="n">order_id</span><span class="p">,</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>        <span class="n">amount</span><span class="o">=</span><span class="n">amount</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    <span class="p">)</span>
-</code></pre></div>
-<h2 id="_12">설정 검증</h2>
-<p>클라이언트 설정이 올바른지 확인:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">ValidationError</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;invalid_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;설정 오류: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="_13">보안 모범 사례</h2>
-<h3 id="1_1">1. 환경변수 사용</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># .env 파일 (절대 Git에 커밋하지 마세요)</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">TOSS_SECRET_KEY</span><span class="o">=</span>test_sk_your_secret_key_here
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># python-dotenv 사용</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">load_dotenv</span><span class="p">()</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">))</span>
-</code></pre></div>
-<h3 id="2-aws-systems-manager-parameter-store">2. AWS Systems Manager Parameter Store</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">boto3</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_secret_key</span><span class="p">():</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="n">ssm</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;ssm&#39;</span><span class="p">)</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">ssm</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        <span class="n">Name</span><span class="o">=</span><span class="s1">&#39;/myapp/toss/secret_key&#39;</span><span class="p">,</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>        <span class="n">WithDecryption</span><span class="o">=</span><span class="kc">True</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="p">)</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;Parameter&#39;</span><span class="p">][</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">get_secret_key</span><span class="p">())</span>
-</code></pre></div>
-<h3 id="3-docker-secrets">3. Docker Secrets</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># docker-compose.yml</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>services:
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span>app:
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span>image:<span class="w"> </span>myapp
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span>secrets:
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">      </span>-<span class="w"> </span>toss_secret_key
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>secrets:
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span>toss_secret_key:
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span>external:<span class="w"> </span><span class="nb">true</span>
-</code></pre></div>
-<h2 id="_14">문제 해결</h2>
-<h3 id="_15">일반적인 설정 오류</h3>
+<h1 id="configuration">Configuration</h1>
+<h2 id="api-credentials">API Credentials</h2>
+<p>To use the TossPayments Python Server SDK, you need to obtain API credentials from the TossPayments Developer Console.</p>
+<h3 id="getting-your-api-keys">Getting Your API Keys</h3>
 <ol>
-<li>
-<p><strong>잘못된 API 키 형식</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># ❌ 잘못된 형식</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;wrong_format_key&quot;</span><span class="p">)</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># ✅ 올바른 형식</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_or_live_sk_format&quot;</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>환경변수 미설정</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">)</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">secret_key</span><span class="p">:</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY 환경변수가 설정되지 않음&quot;</span><span class="p">)</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">secret_key</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>네트워크 타임아웃</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># 타임아웃 늘리기</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;your_key&quot;</span><span class="p">,</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span>  <span class="c1"># 기본 30초에서 60초로 증가</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">)</span>
-</code></pre></div></p>
-</li>
+<li><strong>Register at TossPayments</strong>: Visit <a href="https://developers.tosspayments.com/">TossPayments Developer Console</a></li>
+<li><strong>Create an Application</strong>: Set up your application to get API keys</li>
+<li><strong>Obtain Secret Keys</strong>:</li>
+<li><strong>Test Key</strong>: <code>test_sk_...</code> for development and testing</li>
+<li><strong>Live Key</strong>: <code>live_sk_...</code> for production use</li>
 </ol>
-<h2 id="_16">다음 단계</h2>
-<p>설정이 완료되었다면:</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Notice</p>
+<p>Never expose your secret keys in client-side code, public repositories, or logs. Always use server-side environment variables.</p>
+</div>
+<h2 id="client-configuration">Client Configuration</h2>
+<h3 id="basic-configuration">Basic Configuration</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Test environment</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_test_key_here&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Live environment</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;live_sk_your_live_key_here&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="advanced-configuration">Advanced Configuration</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key_here&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>           <span class="c1"># API version (default: &quot;v1&quot;)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>                 <span class="c1"># Request timeout in seconds (default: 30)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span>              <span class="c1"># Maximum retry attempts (default: 3)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="configuration-options">Configuration Options</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>secret_key</code></td>
+<td><code>str</code></td>
+<td>Required</td>
+<td>TossPayments secret key</td>
+</tr>
+<tr>
+<td><code>api_version</code></td>
+<td><code>str</code></td>
+<td><code>"v1"</code></td>
+<td>TossPayments API version</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td><code>int</code></td>
+<td><code>30</code></td>
+<td>HTTP request timeout in seconds</td>
+</tr>
+<tr>
+<td><code>max_retries</code></td>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Maximum number of retry attempts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment-detection">Environment Detection</h2>
+<p>The SDK automatically detects your environment based on your secret key:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_...&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Environment detection</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test mode: </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">is_test_mode</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>      <span class="c1"># True</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Live mode: </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">is_live_mode</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>      <span class="c1"># False</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Configuration details</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API URL: </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">api_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Timeout: </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">timeout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max retries: </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">max_retries</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>For better security, store your API keys in environment variables:</p>
+<h3 id="setting-environment-variables">Setting Environment Variables</h3>
+<p><strong>Linux/Mac:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TOSS_SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key_here&quot;</span>
+</code></pre></div></p>
+<p><strong>Windows:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>set TOSS_SECRET_KEY=test_sk_your_key_here
+</code></pre></div></p>
+<p><strong>Python .env file:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># .env file</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">TOSS_SECRET_KEY</span><span class="o">=</span><span class="n">test_sk_your_key_here</span>
+</code></pre></div></p>
+<h3 id="using-environment-variables">Using Environment Variables</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Load from environment variable</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">secret_key</span><span class="p">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY environment variable is required&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">secret_key</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="using-python-dotenv">Using python-dotenv</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># First install: pip install python-dotenv</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># Load environment variables from .env file</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">load_dotenv</span><span class="p">()</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;TOSS_SECRET_KEY&quot;</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="configuration-validation">Configuration Validation</h2>
+<p>The SDK automatically validates your configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">ValidationError</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;invalid_key&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Configuration error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="validation-rules">Validation Rules</h3>
+<ul>
+<li><strong>Secret Key Format</strong>: Must start with <code>test_sk_</code> or <code>live_sk_</code></li>
+<li><strong>Timeout</strong>: Must be a positive integer</li>
+<li><strong>Max Retries</strong>: Must be a non-negative integer</li>
+<li><strong>API Version</strong>: Must be a valid string</li>
+</ul>
+<h2 id="http-client-configuration">HTTP Client Configuration</h2>
+<p>The SDK uses an HTTP client with the following default settings:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Default HTTP client settings</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>              <span class="c1"># Request timeout</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="s2">&quot;max_retries&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>           <span class="c1"># Retry attempts</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="s2">&quot;backoff_factor&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>      <span class="c1"># Exponential backoff factor</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="s2">&quot;status_forcelist&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">503</span><span class="p">,</span> <span class="mi">504</span><span class="p">]</span>  <span class="c1"># HTTP statuses to retry</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="custom-http-configuration">Custom HTTP Configuration</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># Custom timeout and retry settings</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key_here&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>        <span class="c1"># 60 seconds timeout</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span>      <span class="c1"># 5 retry attempts</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="testing-configuration">Testing Configuration</h2>
+<p>For testing your configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tosspayments_server_sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_configuration</span><span class="p">():</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;test_sk_your_key_here&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="c1"># Test environment detection</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="k">assert</span> <span class="n">client</span><span class="o">.</span><span class="n">is_test_mode</span> <span class="o">==</span> <span class="kc">True</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="k">assert</span> <span class="n">client</span><span class="o">.</span><span class="n">is_live_mode</span> <span class="o">==</span> <span class="kc">False</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="c1"># Test API URL construction</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">expected_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.tosspayments.com/v1&quot;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="k">assert</span> <span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">api_url</span> <span class="o">==</span> <span class="n">expected_url</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Configuration test passed!&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    <span class="n">test_configuration</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="next-steps">Next Steps</h2>
+<p>With your configuration set up, you're ready to:</p>
 <ol>
-<li><a href="../quickstart/">빠른 시작</a>에서 첫 결제 진행해보기</li>
-<li><a href="../../api/payments/">결제 API</a>에서 상세 기능 확인</li>
-<li><a href="../examples/basic-payment.md">예제</a>에서 실제 구현 방법 참고</li>
+<li><a href="../quickstart/">Quickstart Guide</a> - Make your first API call</li>
+<li><a href="../../api-reference/payments/">Payment Processing</a> - Learn about payment operations</li>
+<li><a href="../../api-reference/client/">API Reference</a> - Complete client documentation</li>
 </ol>
 
 
@@ -1772,7 +1311,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.expand", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
