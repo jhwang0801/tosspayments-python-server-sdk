@@ -6,19 +6,19 @@ from tosspayments_server_sdk.resources.base import BaseResource
 
 
 class PaymentResource(BaseResource):
-    """Payment API Resource
-    Docs(kr): https://docs.tosspayments.com/reference#paymentkey
-    Docs(en): https://docs.tosspayments.com/en/api-guide#overview
+    """Payment API Resource (결제 API 리소스)
+
+    Official docs: https://docs.tosspayments.com/reference#paymentkey
     """
 
     def retrieve(self, payment_key: str) -> Payment:
-        """Retrieve a payment using the paymentKey
+        """Retrieve a payment using the paymentKey (결제키로 결제 조회)
 
         Args:
-            payment_key (str): paymentKey (결제 키)
+            payment_key (str): Payment key (결제 키)
 
         Returns:
-            Payment: Payment Object (결제 정보)
+            Payment: Payment object (결제 정보)
         """
         if not payment_key:
             raise ValidationError("payment_key is required")
@@ -27,13 +27,13 @@ class PaymentResource(BaseResource):
         return Payment.from_dict(response_data)
 
     def retrieve_by_order_id(self, order_id: str) -> Payment:
-        """Retrieve a payment using the orderId
+        """Retrieve a payment using the orderId (주문번호로 결제 조회)
 
         Args:
-            order_id (str): orderId (주문 ID)
+            order_id (str): Order ID (주문 ID)
 
         Returns:
-            Payment: Payment Object (결제 정보)
+            Payment: Payment object (결제 정보)
         """
         if not order_id:
             raise ValidationError("order_id is required")
@@ -42,15 +42,15 @@ class PaymentResource(BaseResource):
         return Payment.from_dict(response_data)
 
     def confirm(self, payment_key: str, order_id: str, amount: int) -> Payment:
-        """Authorize a payment
+        """Confirm a payment (결제 승인)
 
         Args:
-            payment_key (str): paymentKey (결제 키)
-            order_id (str): orderId (주문 ID)
+            payment_key (str): Payment key (결제 키)
+            order_id (str): Order ID (주문 ID)
             amount (int): Amount to charge (결제 금액)
 
         Returns:
-            Payment: Payment Object (결제 정보)
+            Payment: Payment object (결제 정보)
         """
         if not payment_key:
             raise ValidationError("payment_key is required")
@@ -76,17 +76,17 @@ class PaymentResource(BaseResource):
         refund_receive_account: Optional[Dict[str, str]] = None,
         tax_free_amount: Optional[int] = None,
     ) -> Payment:
-        """Cancel payments
+        """Cancel a payment (결제 취소)
 
         Args:
-            payment_key (str): paymentKey (결제 키)
-            cancel_reason (str): Reason for canceling payments (취소 사유)
+            payment_key (str): Payment key (결제 키)
+            cancel_reason (str): Reason for cancellation (취소 사유)
             cancel_amount (int, optional): Amount to cancel (취소 금액)
-            refund_receive_account (dict, optional): The customer's refund account information (환불 계좌 정보)
-            tax_free_amount (int, optional): The tax-exempted amount out total cancel amount (면세 금액)
+            refund_receive_account (dict, optional): Customer's refund account info (환불 계좌 정보)
+            tax_free_amount (int, optional): Tax-free amount (면세 금액)
 
         Returns:
-            Payment: Payment Object (결제 정보)
+            Payment: Payment object (결제 정보)
         """
         if not payment_key:
             raise ValidationError("payment_key is required")

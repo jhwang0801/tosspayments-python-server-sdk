@@ -13,13 +13,13 @@ class Client:
         timeout: int = 30,
         max_retries: int = 3,
     ):
-        """
+        """Initialize TossPayments client.
 
         Args:
-            secret_key: TossPayments secret key
-            api_version: API version
-            timeout: Request timeout (seconds)
-            max_retries: Maximum retry count
+            secret_key: TossPayments secret key (토스페이먼츠 시크릿 키)
+            api_version: API version (API 버전)
+            timeout: Request timeout in seconds (요청 타임아웃 초)
+            max_retries: Maximum retry count (최대 재시도 횟수)
         """
         self.config = Config(
             secret_key=secret_key,
@@ -35,8 +35,10 @@ class Client:
 
     @property
     def is_live_mode(self) -> bool:
+        """Check if client is in live mode (실제 환경 여부 확인)."""
         return self.config.is_live_mode
 
     @property
     def is_test_mode(self) -> bool:
+        """Check if client is in test mode (테스트 환경 여부 확인)."""
         return self.config.is_test_mode
